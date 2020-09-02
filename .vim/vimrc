@@ -11,6 +11,15 @@ set incsearch "一边输入一边高亮
 exec "nohlsearch"
 set ignorecase "搜索时忽略大小写
 set smartcase "搜索时智能大小写
+"tab设置
+set tabstop=4       " Tab键替换的空格长度，默认8
+set softtabstop=4   " 退格键退回缩进空格的长度
+set shiftwidth=4    " 表示每一级缩进的长度
+set expandtab       " 设置缩进用空格来表示
+set autoindent      " 设置自动缩进
+set smarttab
+set backspace=indent,eol,start
+
 
 noremap u l "以u代替l
 noremap l u "以u代替l
@@ -28,7 +37,10 @@ Plug 'vim-airline/vim-airline' "状态栏插件
 Plug 'neoclide/coc.nvim',{'branch': 'release'} "代码补全插件
 Plug 'preservim/nerdtree' "nerdtree是一个树形的目录管理插件，可以方便在nvim中进行当前文件夹中的文件切换
 Plug 'Xuyuanp/nerdtree-git-plugin' "显示git状态标志的NERDTree插件
-
+Plug 'Yggdroot/indentLine' "提供可视化缩进
+Plug 'luochen1990/rainbow' "提供嵌套括号高亮
+Plug 'majutsushi/tagbar' "展示当前文件的一些函数
+Plug 'octol/vim-cpp-enhanced-highlight' "加强C++高亮
 
 call plug#end()
 
@@ -55,6 +67,17 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 "显示隐藏文件
 "let NERDTreeShowHidden=1
+
+"indentline--缩进线设置
+"竖版缩进指示线
+let g:indentLine_enabled = 1 "默认启用indentLine插件
+let g:indentLine_char_list = ['|', '¦', '┆', '┊'] "为不同的缩进级别指定缩进符号
+let indentLine_showFirstIndentLevel = 1 "显示缩进级别
+"将前导空格以指定符号显示
+let g:indentLine_color_term = 239 "缩进符号颜色
+set list lcs=tab:\|\ " 最后面有空格
+let g:indentLine_leadingSpaceChar = '˰' "缩进符号形状:˽˰·
+let g:indentLine_leadingSpaceEnabled = 1 "默认开启
 
 
 
