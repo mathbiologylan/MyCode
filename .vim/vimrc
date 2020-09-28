@@ -20,6 +20,7 @@ set autoindent      " 设置自动缩进
 set smarttab
 set backspace=indent,eol,start
 
+set linespace=6 "设置行距
 
 noremap u l "以u代替l
 noremap l u "以u代替l
@@ -79,7 +80,7 @@ set list lcs=tab:\|\ " 最后面有空格
 let g:indentLine_leadingSpaceChar = '˰' "缩进符号形状:˽˰·
 let g:indentLine_leadingSpaceEnabled = 1 "默认开启
 
-
+let g:clang_library_path='/home/ecos-node1/elasticsearch/ESclient/third-party'
 
 "常用操作：
 "p:粘贴。
