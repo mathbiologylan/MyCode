@@ -104,3 +104,15 @@ let g:indentLine_leadingSpaceEnabled = 1 "默认开启
 " 3、按ctrl+w,再按w切换窗口
 " 4、使用yy命令复制
 " 5、切换窗口按p粘贴
+
+"vim分屏操作：
+" https://www.cnblogs.com/manziluo/p/5789700.html
+
+"vim命令替换操作:
+"https://www.cnblogs.com/configure/p/10233565.html
+
+"批量缩进
+"在命令模式下输入以下指令：
+" '行号1，行号2>/<'
+" 解释：>/<分别表示向右/左缩进一个tab
+" 例 ':1,10<'表示从第1行到第10行向左缩进一个tab
